@@ -11,7 +11,9 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^2.8",
         "laravel/tinker": "^2.7",
+        "spatie/laravel-data": "^2.0",
         "spatie/laravel-stubs": "^2.4",
+        "spatie/laravel-typescript-transformer": "^2.1",
         "tightenco/ziggy": "^1.0"
     },
     "require-dev": {

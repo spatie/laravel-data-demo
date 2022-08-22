@@ -1,4 +1,3 @@
-import React from 'react';
 import Authenticated from "@/Layouts/Authenticated";
 import {Head, Link, useForm} from "@inertiajs/inertia-react";
 import Input from "@/Components/Input";
