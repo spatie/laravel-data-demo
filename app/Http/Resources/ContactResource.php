@@ -10,6 +10,10 @@ class ContactResource extends JsonResource
     {
         return [
             'name' => $this->name,
+            'email' => $this->email,
+            'address' => $this->address,
+            'postal' => $this->postal,
+            'city' => $this->city,
         ];
     }
 }

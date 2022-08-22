@@ -12,7 +12,6 @@ export default function Index({auth, contact}) {
         address: contact.address,
         postal: contact.postal,
         city: contact.city,
-
     })
 
     function submit(e) {
