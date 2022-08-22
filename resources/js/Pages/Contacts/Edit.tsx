@@ -3,8 +3,14 @@ import {Head, Link, useForm} from "@inertiajs/inertia-react";
 import Input from "@/Components/Input";
 import Label from "@/Components/Label";
 import InputError from "@/Components/InputError";
+import ContactData = App.Data.ContactData;
 
-export default function Index({auth, contact}) {
+type Props = {
+    auth: any,
+    contact: ContactData
+}
+
+export default function Index({auth, contact}: Props) {
     const {data, setData, post, processing, errors} = useForm({
         name: contact.name,
         email: contact.email,

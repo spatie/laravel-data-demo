@@ -9,4 +9,5 @@ use Spatie\TypeScriptTransformer\Attributes\TypeScript;
 class ContactData extends Data
 {
     public string $email;
+    public string $name;
 }
