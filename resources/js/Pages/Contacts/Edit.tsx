@@ -11,13 +11,7 @@ type Props = {
 }
 
 export default function Index({auth, contact}: Props) {
-    const {data, setData, post, processing, errors} = useForm({
-        name: contact.name,
-        email: contact.email,
-        address: contact.address,
-        postal: contact.postal,
-        city: contact.city,
-    })
+    const {data, setData, post, processing, errors} = useForm(contact)
 
     function submit(e) {
         e.preventDefault()

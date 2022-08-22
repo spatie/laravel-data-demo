@@ -10,4 +10,5 @@ class ContactData extends Data
 {
     public string $email;
     public string $name;
+    public string $address;
 }
