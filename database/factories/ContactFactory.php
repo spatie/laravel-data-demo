@@ -13,8 +13,8 @@ class ContactFactory extends Factory
     public function definition()
     {
         return [
-            'first_name' => fake()->firstName,
-            'last_name' => fake()->lastName,
+            'email' => fake()->email,
+            'name' => fake()->firstName,
             'address' => fake()->address,
             'postal' => fake()->postcode,
             'city' => fake()->city,

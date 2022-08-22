@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ContactsIndexController;
+use App\Http\Controllers\Contacts\ContactsController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -27,8 +27,10 @@ Route::get('/', function () {
 
 
 Route::middleware(['auth', 'verified'])->group(function() {
-    Route::get('/dashboard', fn() => Inertia::render('Dashboard'))->name('dashboard');
-    Route::get('/contacts', ContactsIndexController::class)->name('contacts');
+    Route::get('dashboard', fn() => Inertia::render('Dashboard'))->name('dashboard');
+    Route::get('contacts', [ContactsController::class, 'index'])->name('contacts');
+    Route::get('contacts/{contact}', [ContactsController::class, 'edit'])->name('contacts.edit');
+    Route::post('contacts/{contact}', [ContactsController::class, 'update']);
 });
 
 require __DIR__.'/auth.php';
