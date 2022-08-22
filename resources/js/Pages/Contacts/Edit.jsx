@@ -1,10 +1,18 @@
 import React from 'react';
 import Authenticated from "@/Layouts/Authenticated";
 import {Head, Link, useForm} from "@inertiajs/inertia-react";
+import Input from "@/Components/Input";
+import Label from "@/Components/Label";
+import InputError from "@/Components/InputError";
 
 export default function Index({auth, contact}) {
     const {data, setData, post, processing, errors} = useForm({
         name: contact.name,
+        email: contact.email,
+        address: contact.address,
+        postal: contact.postal,
+        city: contact.city,
+
     })
 
     function submit(e) {
@@ -26,33 +34,57 @@ export default function Index({auth, contact}) {
 
                             <h1 className="text-2xl font-bold">Edit contact</h1>
 
-                            <form onSubmit={submit}>
-                                <div className="pt-8 space-y-6 sm:pt-10 sm:space-y-5">
-                                    <div className="space-y-6 sm:space-y-5">
-                                        <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start  sm:pt-5">
-                                            <label htmlFor="name"
-                                                   className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                                                Name
-                                            </label>
-                                            <div className="mt-1 sm:mt-0 sm:col-span-2">
-                                                <input
-                                                    value={data.name}
-                                                    onChange={e => setData('name', e.target.value)}
+                            <form className="mt-8 space-y-6" onSubmit={submit}>
 
-                                                    type="text"
-                                                    name="name"
-                                                    id="name"
-                                                    autoComplete="given-name"
-                                                    className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
-                                                />
+                                <div>
+                                    <Label forInput="email" value="Email"/>
+                                    <Input
+                                        name="email"
+                                        value={data.email}
+                                        handleChange={e => setData('email', e.target.value)}
+                                    />
+                                    <InputError message={errors.email}/>
+                                </div>
 
-                                                {errors.name &&
-                                                    <div className="text-sm pt-2 text-red-700">
-                                                        {errors.name}
-                                                    </div>}
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div>
+
+                                    <Label forInput="name" value="Name"/>
+                                    <Input
+                                        name="name"
+                                        value={data.name}
+                                        handleChange={e => setData('name', e.target.value)}
+                                    />
+                                    <InputError message={errors.name}/>
+                                </div>
+
+                                <div>
+                                    <Label forInput="address" value="Address"/>
+                                    <Input
+                                        name="address"
+                                        value={data.address}
+                                        handleChange={e => setData('address', e.target.value)}
+                                    />
+                                    <InputError message={errors.address}/>
+                                </div>
+
+                                <div>
+                                    <Label forInput="postal" value="Postal"/>
+                                    <Input
+                                        name="postal"
+                                        value={data.postal}
+                                        handleChange={e => setData('postal', e.target.value)}
+                                    />
+                                    <InputError message={errors.postal}/>
+                                </div>
+
+                                <div>
+                                    <Label forInput="city" value="City"/>
+                                    <Input
+                                        name="city"
+                                        value={data.city}
+                                        handleChange={e => setData('city', e.target.value)}
+                                    />
+                                    <InputError message={errors.city}/>
                                 </div>
 
                                 <div className="pt-5">
