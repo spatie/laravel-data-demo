@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Contacts;
 
+use App\Data\ContactData;
 use App\Http\Requests\EditContactRequest;
 use App\Models\Contact;
 use Inertia\Inertia;
@@ -22,11 +23,9 @@ class ContactsController
         ]);
     }
 
-    public function update(EditContactRequest $request , Contact $contact)
+    public function update(ContactData $contactData , Contact $contact)
     {
-        $contact->update([
-            'name' => $request->name,
-        ]);
+        $contact->update($contactData->toArray());
 
         return redirect()->route('contacts');
     }

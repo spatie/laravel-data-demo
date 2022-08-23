@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Data\ContactData;
 use App\Http\Resources\ContactResource;
 use App\Models\Contact;
 
@@ -9,11 +10,13 @@ class ContactsController
 {
     public function index()
     {
-        return ContactResource::collection(Contact::all());
+        return ContactData::collection(Contact::all());
+        //return ContactResource::collection(Contact::all());
+
     }
 
     public function show(Contact $contact)
     {
-        return new ContactResource($contact);
+        return ContactData::from($contact);
     }
 }
