@@ -5,6 +5,7 @@ import Label from "@/Components/Label";
 import InputError from "@/Components/InputError";
 import ContactData = App.Data.ContactData;
 
+
 type Props = {
     auth: any,
     contact: ContactData
@@ -23,7 +24,9 @@ export default function Index({auth, contact}: Props) {
             auth={auth}
             header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Contacts</h2>}
         >
-            <Head title="Edit content"/>
+            <Head>
+                <title>Edit content</title>
+            </Head>
 
             <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
