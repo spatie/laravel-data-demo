@@ -5,7 +5,6 @@ import Label from "@/Components/Label";
 import InputError from "@/Components/InputError";
 import ContactData = App.Data.ContactData;
 
-
 type Props = {
     auth: any,
     contact: ContactData
