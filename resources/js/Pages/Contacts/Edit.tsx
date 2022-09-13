@@ -3,7 +3,7 @@ import {Head, Link, useForm} from "@inertiajs/inertia-react";
 import Input from "@/Components/Input";
 import Label from "@/Components/Label";
 import InputError from "@/Components/InputError";
-import ContactData = App.Data.ContactData;
+import {ContactData} from "../../../types/generated";
 
 type Props = {
     auth: any,
@@ -31,11 +31,8 @@ export default function Index({auth, contact}: Props) {
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                         <div className="p-6 bg-white">
-
                             <h1 className="text-2xl font-bold">Edit contact</h1>
-
                             <form className="mt-8 space-y-6" onSubmit={submit}>
-
                                 <div>
                                     <Label forInput="email" value="Email"/>
                                     <Input
