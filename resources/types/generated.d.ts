@@ -1,5 +1,6 @@
 
     export type ContactData = {
+        id: number;
         name: string;
         email: string;
         address: string;

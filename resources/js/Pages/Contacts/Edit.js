@@ -9,17 +9,14 @@ import {ContactData} from "../../../types/generated";
 >>>>>>> 36c5ad8 (Add id to ContactData):resources/js/Pages/Contacts/Edit.js
 
 /**
- * @param {{
- *   auth: any;
- *   contact: App.Data.ContactData;
- * }} props
+ * @param {{ contact: App.Data.ContactData }} props
  */
 export default function Index({ auth, contact }) {
     const {data, setData, post, processing, errors} = useForm(contact)
 
     function submit(e) {
         e.preventDefault()
-        post(route('contacts.edit', contact.id))
+        post(contact.endpoints.edit)
     }
 
     return (
