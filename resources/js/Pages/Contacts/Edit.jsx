@@ -5,7 +5,7 @@ import Label from "@/Components/Label";
 import InputError from "@/Components/InputError";
 
 /**
- * @param {{ contact: App.Data.ContactData }} props
+ * @param {{ contact: ContactData }} props
  */
 export default function Index({ auth, contact }) {
     const {data, setData, post, processing, errors} = useForm(contact)
@@ -34,7 +34,7 @@ export default function Index({ auth, contact }) {
                                     <Label forInput="email" value="Email"/>
                                     <Input
                                         name="email"
-                                        value={data.email}
+                                        value={data}
                                         handleChange={e => setData('email', e.target.value)}
                                     />
                                     <InputError message={errors.email}/>
