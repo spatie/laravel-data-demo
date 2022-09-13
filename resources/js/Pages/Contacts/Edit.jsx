@@ -12,7 +12,7 @@ export default function Index({ auth, contact }) {
 
     function submit(e) {
         e.preventDefault()
-        post(contact.endpoints.edit)
+        post(route('contacts.edit', contact.id))
     }
 
     return (
@@ -34,7 +34,7 @@ export default function Index({ auth, contact }) {
                                     <Label forInput="email" value="Email"/>
                                     <Input
                                         name="email"
-                                        value={data}
+                                        value={data.email}
                                         handleChange={e => setData('email', e.target.value)}
                                     />
                                     <InputError message={errors.email}/>
