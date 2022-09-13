@@ -47,7 +47,6 @@ export default function Index({auth, contact}: Props) {
                                 </div>
 
                                 <div>
-
                                     <Label forInput="name" value="Name"/>
                                     <Input
                                         name="name"

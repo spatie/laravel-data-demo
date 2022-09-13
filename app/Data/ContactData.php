@@ -2,9 +2,7 @@
 
 namespace App\Data;
 
-use Spatie\LaravelData\Attributes\MapName;
 use Spatie\LaravelData\Attributes\MapOutputName;
-use Spatie\LaravelData\Attributes\Validation\Rule;
 use Spatie\LaravelData\Data;
 use Spatie\LaravelData\Mappers\SnakeCaseMapper;
 use Spatie\TypeScriptTransformer\Attributes\TypeScript;
@@ -13,15 +11,12 @@ use Spatie\TypeScriptTransformer\Attributes\TypeScript;
 class ContactData extends Data
 {
     public function __construct(
-        #[Rule('email')]
+        public string $name,
         public string $email,
         public string $address,
-        public $anotherProperty
-    )
-    {
-
-    }
-
+        public string $postal,
+        public string $city,
+    ) {}
 
     public static function rules(): array
     {
