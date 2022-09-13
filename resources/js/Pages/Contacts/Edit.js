@@ -3,14 +3,18 @@ import {Head, Link, useForm} from "@inertiajs/inertia-react";
 import Input from "@/Components/Input";
 import Label from "@/Components/Label";
 import InputError from "@/Components/InputError";
+<<<<<<< HEAD:resources/js/Pages/Contacts/Edit.tsx
 import {ContactData} from "../../../types/generated";
+=======
+>>>>>>> 36c5ad8 (Add id to ContactData):resources/js/Pages/Contacts/Edit.js
 
-type Props = {
-    auth: any,
-    contact: ContactData
-}
-
-export default function Index({auth, contact}: Props) {
+/**
+ * @param {{
+ *   auth: any;
+ *   contact: App.Data.ContactData;
+ * }} props
+ */
+export default function Index({ auth, contact }) {
     const {data, setData, post, processing, errors} = useForm(contact)
 
     function submit(e) {
