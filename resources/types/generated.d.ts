@@ -1,4 +1,4 @@
-
+declare namespace App.Data {
     export type ContactData = {
         id: number;
         name: string;
@@ -7,4 +7,4 @@
         postal: string;
         city: string;
     };
-
+}
