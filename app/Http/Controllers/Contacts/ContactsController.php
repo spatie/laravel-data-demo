@@ -26,6 +26,6 @@ class ContactsController
     {
         $contact->update($request->validated());
 
-        return redirect()->route('contacts');
+        return redirect()->back();
     }
 }

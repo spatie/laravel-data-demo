@@ -8,7 +8,7 @@ import InputError from "@/Components/InputError";
  * @param {{ contact: ContactData }} props
  */
 export default function Index({ auth, contact }) {
-    const { data, setData, post, processing, errors } = useForm(contact);
+    const { data, setData, post, processing, errors, hasErrors, wasSuccessful } = useForm(contact);
 
     function submit(e) {
         e.preventDefault();
@@ -28,6 +28,12 @@ export default function Index({ auth, contact }) {
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                         <div className="p-6 bg-white">
+                            {hasErrors && (
+                                <p className="p-4 rounded bg-red-200 text-red-900 mb-8">Please correct the errors below.</p>
+                            )}
+                            {wasSuccessful && (
+                                <p className="p-4 rounded bg-green-200 text-green-900 mb-8">Contact saved.</p>
+                            )}
                             <h1 className="text-2xl font-bold">Edit contact</h1>
                             <form className="mt-8 space-y-6" onSubmit={submit}>
                                 <div>
