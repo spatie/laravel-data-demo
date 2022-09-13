@@ -1,5 +1,5 @@
 import Authenticated from "@/Layouts/Authenticated";
-import {Head, Link, useForm} from "@inertiajs/inertia-react";
+import { Head, Link, useForm } from "@inertiajs/inertia-react";
 import Input from "@/Components/Input";
 import Label from "@/Components/Label";
 import InputError from "@/Components/InputError";
@@ -8,11 +8,11 @@ import InputError from "@/Components/InputError";
  * @param {{ contact: ContactData }} props
  */
 export default function Index({ auth, contact }) {
-    const {data, setData, post, processing, errors} = useForm(contact)
+    const { data, setData, post, processing, errors } = useForm(contact);
 
     function submit(e) {
-        e.preventDefault()
-        post(route('contacts.edit', contact.id))
+        e.preventDefault();
+        post(route("contacts.edit", contact.id));
     }
 
     return (
@@ -31,59 +31,59 @@ export default function Index({ auth, contact }) {
                             <h1 className="text-2xl font-bold">Edit contact</h1>
                             <form className="mt-8 space-y-6" onSubmit={submit}>
                                 <div>
-                                    <Label forInput="email" value="Email"/>
+                                    <Label forInput="email" value="Email" />
                                     <Input
                                         name="email"
                                         value={data.email}
-                                        handleChange={e => setData('email', e.target.value)}
+                                        handleChange={(e) => setData("email", e.target.value)}
                                     />
-                                    <InputError message={errors.email}/>
+                                    <InputError message={errors.email} />
                                 </div>
 
                                 <div>
-                                    <Label forInput="name" value="Name"/>
+                                    <Label forInput="name" value="Name" />
                                     <Input
                                         name="name"
                                         value={data.name}
-                                        handleChange={e => setData('name', e.target.value)}
+                                        handleChange={(e) => setData("name", e.target.value)}
                                     />
-                                    <InputError message={errors.name}/>
+                                    <InputError message={errors.name} />
                                 </div>
 
                                 <div>
-                                    <Label forInput="address" value="Address"/>
+                                    <Label forInput="address" value="Address" />
                                     <Input
                                         name="address"
                                         value={data.address}
-                                        handleChange={e => setData('address', e.target.value)}
+                                        handleChange={(e) => setData("address", e.target.value)}
                                     />
-                                    <InputError message={errors.address}/>
+                                    <InputError message={errors.address} />
                                 </div>
 
                                 <div>
-                                    <Label forInput="postal" value="Postal"/>
+                                    <Label forInput="postal" value="Postal" />
                                     <Input
                                         name="postal"
                                         value={data.postal}
-                                        handleChange={e => setData('postal', e.target.value)}
+                                        handleChange={(e) => setData("postal", e.target.value)}
                                     />
-                                    <InputError message={errors.postal}/>
+                                    <InputError message={errors.postal} />
                                 </div>
 
                                 <div>
-                                    <Label forInput="city" value="City"/>
+                                    <Label forInput="city" value="City" />
                                     <Input
                                         name="city"
                                         value={data.city}
-                                        handleChange={e => setData('city', e.target.value)}
+                                        handleChange={(e) => setData("city", e.target.value)}
                                     />
-                                    <InputError message={errors.city}/>
+                                    <InputError message={errors.city} />
                                 </div>
 
                                 <div className="pt-5">
                                     <div className="flex justify-end">
                                         <Link
-                                            href={route('contacts')}
+                                            href={route("contacts")}
                                             className="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                         >
                                             Cancel
@@ -102,7 +102,6 @@ export default function Index({ auth, contact }) {
                     </div>
                 </div>
             </div>
-
         </Authenticated>
-    )
+    );
 }

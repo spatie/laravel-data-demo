@@ -1,13 +1,13 @@
-import React from 'react';
-import Button from '@/Components/Button';
-import Guest from '@/Layouts/Guest';
-import Input from '@/Components/Input';
-import InputError from '@/Components/InputError';
-import { Head, useForm } from '@inertiajs/inertia-react';
+import React from "react";
+import Button from "@/Components/Button";
+import Guest from "@/Layouts/Guest";
+import Input from "@/Components/Input";
+import InputError from "@/Components/InputError";
+import { Head, useForm } from "@inertiajs/inertia-react";
 
 export default function ForgotPassword({ status }) {
     const { data, setData, post, processing, errors } = useForm({
-        email: '',
+        email: "",
     });
 
     const onHandleChange = (event) => {
@@ -17,7 +17,7 @@ export default function ForgotPassword({ status }) {
     const submit = (e) => {
         e.preventDefault();
 
-        post(route('password.email'));
+        post(route("password.email"));
     };
 
     return (

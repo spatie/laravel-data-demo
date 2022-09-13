@@ -1,10 +1,8 @@
-
-    export type ContactData = {
-        id: number;
-        name: string;
-        email: string;
-        address: string;
-        postal: string;
-        city: string;
-    };
-
+export type ContactData = {
+    id: number;
+    name: string;
+    email: string;
+    address: string;
+    postal: string;
+    city: string;
+};

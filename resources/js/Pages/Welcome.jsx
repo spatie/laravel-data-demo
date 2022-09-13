@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link, Head } from '@inertiajs/inertia-react';
+import React from "react";
+import { Link, Head } from "@inertiajs/inertia-react";
 
 export default function Welcome(props) {
     return (
@@ -8,17 +8,17 @@ export default function Welcome(props) {
             <div className="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
                 <div className="fixed top-0 right-0 px-6 py-4 sm:block">
                     {props.auth.user ? (
-                        <Link href={route('dashboard')} className="text-sm text-gray-700 dark:text-gray-500 underline">
+                        <Link href={route("dashboard")} className="text-sm text-gray-700 dark:text-gray-500 underline">
                             Dashboard
                         </Link>
                     ) : (
                         <>
-                            <Link href={route('login')} className="text-sm text-gray-700 dark:text-gray-500 underline">
+                            <Link href={route("login")} className="text-sm text-gray-700 dark:text-gray-500 underline">
                                 Log in
                             </Link>
 
                             <Link
-                                href={route('register')}
+                                href={route("register")}
                                 className="ml-4 text-sm text-gray-700 dark:text-gray-500 underline"
                             >
                                 Register
@@ -164,44 +164,44 @@ export default function Welcome(props) {
 
                                 <div className="ml-12">
                                     <div className="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                        Laravel's robust library of first-party tools and libraries, such as{' '}
+                                        Laravel's robust library of first-party tools and libraries, such as{" "}
                                         <a href="https://forge.laravel.com" className="underline">
                                             Forge
                                         </a>
-                                        ,{' '}
+                                        ,{" "}
                                         <a href="https://vapor.laravel.com" className="underline">
                                             Vapor
                                         </a>
-                                        ,{' '}
+                                        ,{" "}
                                         <a href="https://nova.laravel.com" className="underline">
                                             Nova
                                         </a>
-                                        , and{' '}
+                                        , and{" "}
                                         <a href="https://envoyer.io" className="underline">
                                             Envoyer
-                                        </a>{' '}
+                                        </a>{" "}
                                         help you take your projects to the next level. Pair them with powerful open
-                                        source libraries like{' '}
+                                        source libraries like{" "}
                                         <a href="https://laravel.com/docs/billing" className="underline">
                                             Cashier
                                         </a>
-                                        ,{' '}
+                                        ,{" "}
                                         <a href="https://laravel.com/docs/dusk" className="underline">
                                             Dusk
                                         </a>
-                                        ,{' '}
+                                        ,{" "}
                                         <a href="https://laravel.com/docs/broadcasting" className="underline">
                                             Echo
                                         </a>
-                                        ,{' '}
+                                        ,{" "}
                                         <a href="https://laravel.com/docs/horizon" className="underline">
                                             Horizon
                                         </a>
-                                        ,{' '}
+                                        ,{" "}
                                         <a href="https://laravel.com/docs/sanctum" className="underline">
                                             Sanctum
                                         </a>
-                                        ,{' '}
+                                        ,{" "}
                                         <a href="https://laravel.com/docs/telescope" className="underline">
                                             Telescope
                                         </a>
