@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
 
         Contact::factory()->create([
             'name' => 'Taylor Otwell',
-            'email' => 'taylor@lambo.org'
+            'email' => 'taylor@kirk-and-spock-portraits.org'
         ]);
 
         Contact::factory()->create([
