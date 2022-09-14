@@ -13,7 +13,7 @@ export default function Index({ auth, contacts }) {
     );
 
     return (
-        <Layout title="Contacts">
+        <Layout title="Laravel Contacts">
             <div className="space-y-10">
                 {entries(groupedContacts).map(([letter, contacts]) => (
                     <div key={letter} className="flex">
