@@ -17,7 +17,7 @@ export default function Index({ auth, contacts }) {
             <div className="space-y-10">
                 {entries(groupedContacts).map(([letter, contacts]) => (
                     <div key={letter} className="flex">
-                        <p className="font-bold font-serif text-6xl text-blue-400 w-24 text-center -ml-6">{letter}</p>
+                        <p className="font-bold font-serif text-5xl text-blue-400 w-24 text-center -ml-6">{letter}</p>
                         <ol className="flex-1">
                             {contacts.map((contact) => (
                                 <li key={contact.id} className="py-2 border-b border-gray-100 last:border-none">
