@@ -45,7 +45,7 @@ class DatabaseSeeder extends Seeder
 
         Contact::factory()->create([
             'name' => 'Christoph Rumpel',
-            'email' => 'christoph@hero-of-the-world.au'
+            'email' => 'christoph@no-more-encore.au'
         ]);
 
         Contact::factory()->create([
