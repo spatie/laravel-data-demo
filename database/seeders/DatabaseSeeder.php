@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
 
         Contact::factory()->create([
             'name' => 'Seb De Deyne',
-            'email' => 'sebastian@spatie.be'
+            'email' => 'sebastian@photography.org'
         ]);
 
         Contact::factory()->create([
@@ -115,7 +115,17 @@ class DatabaseSeeder extends Seeder
 
         Contact::factory()->create([
             'name' => 'Rias Van der Veken',
-            'email' => 'rias@mailcoach.app'
+            'email' => 'rias@email-hero.app'
+        ]);
+
+        Contact::factory()->create([
+            'name' => 'Alex Vanderbist',
+            'email' => 'alex@handcrafted.synths'
+        ]);
+
+        Contact::factory()->create([
+            'name' => 'Ruben Van Assche',
+            'email' => 'ruben@rewriting-history.org'
         ]);
     }
 }
