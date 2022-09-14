@@ -112,5 +112,10 @@ class DatabaseSeeder extends Seeder
             'name' => 'Jess Archer',
             'email' => 'jess@vim-for-life.com'
         ]);
+
+        Contact::factory()->create([
+            'name' => 'Rias Van der Veken',
+            'email' => 'rias@mailcoach.app'
+        ]);
     }
 }
