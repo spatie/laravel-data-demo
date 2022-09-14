@@ -1,0 +1,60 @@
+<?php
+
+namespace App\Data;
+
+use Spatie\LaravelData\Data;
+
+class ContactData extends Data
+{
+    public function __construct(
+        public int $id,
+        public string $name,
+        public string $email,
+        public string $address,
+        public string $postal,
+        public string $city,
+    ) {}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+http://laravel-data-demo.test/contacts
+
+<?php
+
+namespace App\Http\Controllers\Api;
+
+use App\Data\ContactData;
+use App\Http\Resources\ContactResource;
+use App\Models\Contact;
+
+class ContactsController
+{
+    public function index()
+    {
+        return ContactData::collection(Contact::all());
+    }
+
+    public function show(Contact $contact)
+    {
+        return ContactData::from($contact);
+    }
+}
+
+/**
+ * @param {{ contact: App.Data.ContactData }} props
+ */
+
+
+#[TypeScript]
+
+php artisan typescript:transform
