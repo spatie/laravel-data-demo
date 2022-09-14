@@ -54,6 +54,11 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Contact::factory()->create([
+            'name' => 'Caleb Porzio',
+            'email' => 'caleb@livewire-is-fire.com'
+        ]);
+
+        Contact::factory()->create([
             'name' => 'Caneco',
             'email' => 'caneco@caneco-face.pt'
         ]);
