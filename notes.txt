@@ -27,6 +27,15 @@ class ContactData extends Data
 
 
 
+
+
+
+
+
+
+
+
+
 http://laravel-data-demo.test/contacts
 
 <?php
