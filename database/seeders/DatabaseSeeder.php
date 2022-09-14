@@ -25,7 +25,12 @@ class DatabaseSeeder extends Seeder
 
         Contact::factory()->create([
             'name' => 'Taylor Otwell',
-            'email' => 'taylor@laravel.com'
+            'email' => 'taylor@lambo.org'
+        ]);
+
+        Contact::factory()->create([
+            'name' => 'Matt Stauffer',
+            'email' => 'matt@empathy.company'
         ]);
 
         Contact::factory()->create([
@@ -60,12 +65,17 @@ class DatabaseSeeder extends Seeder
 
         Contact::factory()->create([
             'name' => 'Caneco',
-            'email' => 'caneco@caneco-face.pt'
+            'email' => 'caneco@can-you-see-my-screen.pt'
         ]);
 
         Contact::factory()->create([
             'name' => 'Kai Sassnowski',
             'email' => 'kai@venture.com'
+        ]);
+
+        Contact::factory()->create([
+            'name' => 'Marjorie Holmstrom-Sabo',
+            'email' => 'marjorie@lego-houses.org'
         ]);
 
         Contact::factory()->create([
