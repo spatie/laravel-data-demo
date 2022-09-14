@@ -1,8 +1,8 @@
-import Authenticated from "@/Layouts/Authenticated";
-import { Head, Link, useForm } from "@inertiajs/inertia-react";
+import Layout from "@/Layouts/Layout";
+import { Link, useForm } from "@inertiajs/inertia-react";
 import Input from "@/Components/Input";
-import Label from "@/Components/Label";
 import InputError from "@/Components/InputError";
+import Label from "@/Components/Label";
 
 /**
  * @param {{ contact: ContactData }} props
@@ -16,98 +16,68 @@ export default function Index({ auth, contact }) {
     }
 
     return (
-        <Authenticated
-            auth={auth}
-            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Contacts</h2>}
-        >
-            <Head>
-                <title>Edit content</title>
-            </Head>
+        <Layout title={contact.name}>
+            {hasErrors && (
+                <p className="p-4 bg-pink-50 border-pink-100 text-pink-900 -mx-8 mb-8 text-center">
+                    Please correct the errors below.
+                </p>
+            )}
+            {wasSuccessful && (
+                <p className="p-4 bg-teal-50 border-teal-100 text-teal-900 -mx-8 mb-8 text-center">Contact saved.</p>
+            )}
+            <form className="space-y-6" onSubmit={submit}>
+                <div>
+                    <Label forInput="email" value="Email" />
+                    <Input name="email" value={data.email} handleChange={(e) => setData("email", e.target.value)} />
+                    <InputError message={errors.email} />
+                </div>
 
-            <div className="py-12">
-                <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                    <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                        <div className="p-6 bg-white">
-                            {hasErrors && (
-                                <p className="p-4 rounded bg-red-200 text-red-900 mb-8">Please correct the errors below.</p>
-                            )}
-                            {wasSuccessful && (
-                                <p className="p-4 rounded bg-green-200 text-green-900 mb-8">Contact saved.</p>
-                            )}
-                            <h1 className="text-2xl font-bold">Edit contact</h1>
-                            <form className="mt-8 space-y-6" onSubmit={submit}>
-                                <div>
-                                    <Label forInput="email" value="Email" />
-                                    <Input
-                                        name="email"
-                                        value={data.email}
-                                        handleChange={(e) => setData("email", e.target.value)}
-                                    />
-                                    <InputError message={errors.email} />
-                                </div>
+                <div>
+                    <Label forInput="name" value="Name" />
+                    <Input name="name" value={data.name} handleChange={(e) => setData("name", e.target.value)} />
+                    <InputError message={errors.name} />
+                </div>
 
-                                <div>
-                                    <Label forInput="name" value="Name" />
-                                    <Input
-                                        name="name"
-                                        value={data.name}
-                                        handleChange={(e) => setData("name", e.target.value)}
-                                    />
-                                    <InputError message={errors.name} />
-                                </div>
+                <div>
+                    <Label forInput="address" value="Address" />
+                    <Input
+                        name="address"
+                        value={data.address}
+                        handleChange={(e) => setData("address", e.target.value)}
+                    />
+                    <InputError message={errors.address} />
+                </div>
 
-                                <div>
-                                    <Label forInput="address" value="Address" />
-                                    <Input
-                                        name="address"
-                                        value={data.address}
-                                        handleChange={(e) => setData("address", e.target.value)}
-                                    />
-                                    <InputError message={errors.address} />
-                                </div>
+                <div>
+                    <Label forInput="postal" value="Postal" />
+                    <Input name="postal" value={data.postal} handleChange={(e) => setData("postal", e.target.value)} />
+                    <InputError message={errors.postal} />
+                </div>
 
-                                <div>
-                                    <Label forInput="postal" value="Postal" />
-                                    <Input
-                                        name="postal"
-                                        value={data.postal}
-                                        handleChange={(e) => setData("postal", e.target.value)}
-                                    />
-                                    <InputError message={errors.postal} />
-                                </div>
+                <div>
+                    <Label forInput="city" value="City" />
+                    <Input name="city" value={data.city} handleChange={(e) => setData("city", e.target.value)} />
+                    <InputError message={errors.city} />
+                </div>
 
-                                <div>
-                                    <Label forInput="city" value="City" />
-                                    <Input
-                                        name="city"
-                                        value={data.city}
-                                        handleChange={(e) => setData("city", e.target.value)}
-                                    />
-                                    <InputError message={errors.city} />
-                                </div>
-
-                                <div className="pt-5">
-                                    <div className="flex justify-end">
-                                        <Link
-                                            href={route("contacts")}
-                                            className="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                        >
-                                            Cancel
-                                        </Link>
-                                        <button
-                                            disabled={processing}
-                                            type="submit"
-                                            className="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                        >
-                                            Save
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                <div className="pt-5">
+                    <div className="flex justify-end">
+                        <Link
+                            href={route("contacts")}
+                            className="bg-white py-2 px-4 shadow-sm text-sm font-medium text-gray-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-shadow"
+                        >
+                            Cancel
+                        </Link>
+                        <button
+                            disabled={processing}
+                            type="submit"
+                            className="ml-3 inline-flex justify-center py-2 px-4 shadow-md text-sm font-medium text-white bg-pink-400 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-shadow"
+                        >
+                            Save
+                        </button>
                     </div>
                 </div>
-            </div>
-        </Authenticated>
+            </form>
+        </Layout>
     );
 }
