@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
 
         Contact::factory()->create([
             'name' => 'Matt Stauffer',
-            'email' => 'matt@empathy.company'
+            'email' => 'matt@write-everything-twice.company'
         ]);
 
         Contact::factory()->create([
