@@ -67,3 +67,8 @@ class ContactsController
 #[TypeScript]
 
 php artisan typescript:transform
+
+
+in Flare:
+CreateProjectController
+ProjectsIndexController
