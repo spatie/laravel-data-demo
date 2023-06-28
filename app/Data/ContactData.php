@@ -2,7 +2,6 @@
 
 namespace App\Data;
 
-use Spatie\LaravelData\Attributes\Validation\Rule;
 use Spatie\LaravelData\Data;
 
 class ContactData extends Data
@@ -14,8 +13,6 @@ class ContactData extends Data
         public string $address,
         public string $postal,
         public string $city,
-    )
-    {
+    ) {
     }
 }
-
