@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Contacts;
 
-use Inertia\Response;
-use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\EditContactRequest;
 use App\Models\Contact;
+use Illuminate\Http\RedirectResponse;
 use Inertia\Inertia;
+use Inertia\Response;
 
 class ContactsController
 {
