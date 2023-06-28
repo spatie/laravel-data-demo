@@ -43,6 +43,11 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Contact::factory()->create([
+            'name' => 'Zuzana Kunckova',
+            'email' => 'zuzana@larabelles.com',
+        ]);
+
+        Contact::factory()->create([
             'name' => 'Christoph Rumpel',
             'email' => 'christoph@no-more-encore.at',
         ]);
@@ -54,32 +59,17 @@ class DatabaseSeeder extends Seeder
 
         Contact::factory()->create([
             'name' => 'Aaron Francis',
-            'email' => 'aaron@example.com',
+            'email' => 'aaron@torchlight.com',
         ]);
 
         Contact::factory()->create([
             'name' => 'Caleb Porzio',
-            'email' => 'caleb@livewire-is-fire.com',
+            'email' => 'caleb@livewire-is-live.com',
         ]);
 
         Contact::factory()->create([
             'name' => 'Caneco',
             'email' => 'caneco@can-you-see-my-screen.pt',
-        ]);
-
-        Contact::factory()->create([
-            'name' => 'Kai Sassnowski',
-            'email' => 'kai@venture.com',
-        ]);
-
-        Contact::factory()->create([
-            'name' => 'Marjorie Holmstrom-Sabo',
-            'email' => 'marjorie@lego-houses.org',
-        ]);
-
-        Contact::factory()->create([
-            'name' => 'Steve McDougall',
-            'email' => 'steve@streaming-heroes.com',
         ]);
 
         Contact::factory()->create([
@@ -91,6 +81,23 @@ class DatabaseSeeder extends Seeder
             'name' => 'Luke Downing',
             'email' => 'luke@the-parrot-company.com',
         ]);
+
+        Contact::factory()->create([
+            'name' => 'Marcel Pociot',
+            'email' => 'marcel@jail-jail-jail.in',
+        ]);
+
+        Contact::factory()->create([
+            'name' => 'Francisco Madeira',
+            'email' => 'francisco@tank.pt',
+        ]);
+
+        Contact::factory()->create([
+            'name' => 'Vishal Rajpurohit',
+            'email' => 'vishal@off-road-driving.in',
+        ]);
+
+
 
         Contact::factory()->create([
             'name' => 'Povilas Korop',
@@ -140,6 +147,11 @@ class DatabaseSeeder extends Seeder
         Contact::factory()->create([
             'name' => 'Ruben Van Assche',
             'email' => 'ruben@rewriting-history.org',
+        ]);
+
+        Contact::factory()->create([
+            'name' => 'Niels Vanpachtenbeke',
+            'email' => 'niels@wordpress.org',
         ]);
     }
 }
