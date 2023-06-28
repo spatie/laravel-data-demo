@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class ContactFactory extends Factory
 {
-    public function definition()
+    public function definition(): array
     {
         return [
             'email' => fake()->email,
