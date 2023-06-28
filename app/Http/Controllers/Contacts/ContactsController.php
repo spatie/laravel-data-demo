@@ -22,7 +22,7 @@ class ContactsController
         ]);
     }
 
-    public function update(EditContactRequest $request , Contact $contact)
+    public function update(EditContactRequest $request, Contact $contact)
     {
         $contact->update($request->validated());
 
