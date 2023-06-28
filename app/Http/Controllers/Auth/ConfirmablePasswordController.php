@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Inertia\Response;
+use Illuminate\Http\RedirectResponse;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
@@ -16,7 +18,7 @@ class ConfirmablePasswordController extends Controller
      *
      * @return \Inertia\Response
      */
-    public function show()
+    public function show(): Response
     {
         return Inertia::render('Auth/ConfirmPassword');
     }
@@ -26,7 +28,7 @@ class ConfirmablePasswordController extends Controller
      *
      * @return mixed
      */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
         if (! Auth::guard('web')->validate([
             'email' => $request->user()->email,
