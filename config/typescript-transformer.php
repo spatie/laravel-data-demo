@@ -18,6 +18,7 @@ return [
 
     'collectors' => [
         Spatie\TypeScriptTransformer\Collectors\DefaultCollector::class,
+        \Spatie\LaravelData\Support\TypeScriptTransformer\DataTypeScriptCollector::class,
     ],
 
     /*

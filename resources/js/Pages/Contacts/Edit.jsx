@@ -5,18 +5,18 @@ import InputError from "@/Components/InputError";
 import Label from "@/Components/Label";
 
 /**
- * @param {{ contact: ContactData }} props
+ * @param {{ contact: App.Data.ContactData }} props
  */
 export default function Index({ auth, contact }) {
     const { data, setData, post, processing, errors, hasErrors, wasSuccessful } = useForm(contact);
 
     function submit(e) {
         e.preventDefault();
-        post(route("contacts.edit", contact.id));
+        post(route("contacts.edit", contact));
     }
 
     return (
-        <Layout title={contact.name}>
+        <Layout title={contact}>
             {hasErrors && (
                 <p className="p-4 bg-pink-50 border-pink-100 text-pink-900 -mx-8 mb-8 text-center">
                     Please correct the errors below.

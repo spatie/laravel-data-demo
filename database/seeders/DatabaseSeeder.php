@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Contact;
+use App\Models\Group;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -38,9 +39,16 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Contact::factory()->create([
+            'name' => 'Jake Bennett',
+            'email' => 'jake@statemachines.com',
+        ]);
+
+        /*
+        Contact::factory()->create([
             'name' => 'Ian Landsman',
             'email' => 'ian@godfather.com',
         ]);
+        */
 
         Contact::factory()->create([
             'name' => 'Zuzana Kunckova',
@@ -59,12 +67,12 @@ class DatabaseSeeder extends Seeder
 
         Contact::factory()->create([
             'name' => 'Aaron Francis',
-            'email' => 'aaron@torchlight.com',
+            'email' => 'aaron@twotwins.com',
         ]);
 
         Contact::factory()->create([
             'name' => 'Caleb Porzio',
-            'email' => 'caleb@livewire-is-live.com',
+            'email' => 'caleb@livewire-is-life.com',
         ]);
 
         Contact::factory()->create([
@@ -77,10 +85,12 @@ class DatabaseSeeder extends Seeder
             'email' => 'nuno@pest-is-the-best.org',
         ]);
 
+        /*
         Contact::factory()->create([
             'name' => 'Luke Downing',
             'email' => 'luke@the-parrot-company.com',
         ]);
+        */
 
         Contact::factory()->create([
             'name' => 'Marcel Pociot',
@@ -94,10 +104,8 @@ class DatabaseSeeder extends Seeder
 
         Contact::factory()->create([
             'name' => 'Vishal Rajpurohit',
-            'email' => 'vishal@off-road-driving.in',
+            'email' => 'vishal@offroad-driving.in',
         ]);
-
-
 
         Contact::factory()->create([
             'name' => 'Povilas Korop',
@@ -131,12 +139,12 @@ class DatabaseSeeder extends Seeder
 
         Contact::factory()->create([
             'name' => 'Jess Archer',
-            'email' => 'jess@vim-for-life.com',
+            'email' => 'jess@vim-4-ever.com',
         ]);
 
         Contact::factory()->create([
             'name' => 'Rias Van der Veken',
-            'email' => 'rias@email-hero.app',
+            'email' => 'rias@guildwards.com',
         ]);
 
         Contact::factory()->create([
@@ -146,7 +154,7 @@ class DatabaseSeeder extends Seeder
 
         Contact::factory()->create([
             'name' => 'Ruben Van Assche',
-            'email' => 'ruben@rewriting-history.org',
+            'email' => 'ruben@craft-beers.org',
         ]);
 
         Contact::factory()->create([
