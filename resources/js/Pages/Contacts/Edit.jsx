@@ -5,7 +5,7 @@ import InputError from "@/Components/InputError";
 import Label from "@/Components/Label";
 
 /**
- * @param {{ contact: App.Data.ContactData }} props
+ * @param {{ contact: ContactData }} props
  */
 export default function Index({ auth, contact }) {
     const { data, setData, post, processing, errors, hasErrors, wasSuccessful } = useForm(contact);
