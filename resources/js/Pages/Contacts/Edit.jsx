@@ -38,6 +38,7 @@ export default function Index({ auth, contact }) {
                     <InputError message={errors.name} />
                 </div>
 
+
                 <div>
                     <Label forInput="address" value="Address" />
                     <Input
